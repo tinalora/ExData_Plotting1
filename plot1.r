@@ -19,7 +19,7 @@ library(dplyr)
 df <- select(data, Global_active_power:Sub_metering_3)
 df2 <- lapply(df, as.numeric)
 df3 <- cbind(data[, 1:2], df2)
-data2 <- filter(df3, Date == "2007-02-01" | Date == "2007-02-02")
+data2 <- filter(df3, Date == "2007-02-01" | Date = "2007-02-02")
 
 
 ## EDA plot 1
